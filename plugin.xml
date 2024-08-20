@@ -92,8 +92,6 @@
 			<string>production</string>
 		</config-file>
 		
-		<resource-file src="src/ios/GoogleService-Info.plist" target="Resources/GoogleService-Info.plist" />
-		
         <header-file src="src/ios/FCMPlugin.h" />
         <source-file src="src/ios/FCMPlugin.m" />
 		
@@ -122,9 +120,5 @@
 		<framework src="libz.tbd" />
 		<framework src="Security.framework" />
     </platform>
-	
-	<!-- COPY FCM CONFIG FILES TO PLATFORM AFTER PLUGIN INSTALL OR PLATFORM PREPARE -->
-	<hook src="scripts/fcm_config_files_process.js" type="after_plugin_add" />
-	<hook src="scripts/fcm_config_files_process.js" type="after_prepare" />
-	
+		
 </plugin>
